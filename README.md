@@ -1,4 +1,5 @@
 # nix-quartus
+
 Nix Expressions for Altera(Intel) Quartus.
 
 These expressions are based on the expressions for Quartus found in Bjørn
@@ -13,11 +14,11 @@ Simply import the top-level expression for the desired Quartus version. For
 example, to build the Lite Edition of Quartus Prime 18:
 
 ```
-$ nix build "(import ./lite18.nix)"
+$ nix-build -A altera-quartus-prime-lite-18
 ```
 
 To install the same version:
 
 ```
-$ nix-env -i -E "_: import ./lite18.nix"
+$ nix-env -f default.nix -iA altera-quartus-prime-lite-18
 ```
